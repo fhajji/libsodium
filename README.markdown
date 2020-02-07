@@ -3,8 +3,20 @@
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/2397/badge.svg)](https://scan.coverity.com/projects/2397)
 [![Azure build status](https://jedisct1.visualstudio.com/Libsodium/_apis/build/status/jedisct1.libsodium?branchName=stable)](https://jedisct1.visualstudio.com/Libsodium/_build/latest?definitionId=3&branchName=stable)
 
-![libsodium](https://raw.github.com/jedisct1/libsodium/master/logo.png)
-============
+# ![libsodium](https://raw.github.com/jedisct1/libsodium/master/logo.png)
+
+## THIS IS A FORK
+
+This is a fork of the original [jedisct1/libsodium](https://github.com/jedisct1/libsodium).
+It is identical (up to the point of last sync), except that it adds:
+
+- crypto_core_ristretto255_from_bytes()
+- crypto_core_ristretto255_to_bytes()
+
+Unless you have a very specific need for these additions, please use
+jedisct1/libsodium instead.
+
+## Original README
 
 Sodium is a new, easy-to-use software library for encryption,
 decryption, signatures, password hashing and more.
@@ -24,10 +36,10 @@ as well as Javascript and Webassembly.
 
 The documentation is available on Gitbook and built from the [libsodium-doc](https://github.com/jedisct1/libsodium-doc) repository:
 
-* [libsodium documentation](https://download.libsodium.org/doc/) -
-online, requires Javascript.
-* [offline documentation](https://www.gitbook.com/book/jedisct1/libsodium/details)
-in PDF format.
+- [libsodium documentation](https://download.libsodium.org/doc/) -
+  online, requires Javascript.
+- [offline documentation](https://www.gitbook.com/book/jedisct1/libsodium/details)
+  in PDF format.
 
 ## Integrity Checking
 
@@ -63,8 +75,6 @@ Become a financial contributor and help us sustain our community. [[Contribute](
 Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/libsodium/contribute)]
 
 <a href="https://opencollective.com/libsodium/organization/0/website"><img src="https://opencollective.com/libsodium/organization/0/avatar.svg"></a>
-
-
 
 ## License
 
