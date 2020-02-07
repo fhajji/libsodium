@@ -76,6 +76,24 @@ crypto_core_ristretto255_random(unsigned char *p)
     (void) crypto_core_ristretto255_from_hash(p, h);
 }
 
+int
+crypto_core_ristretto255_from_bytes(unsigned char* p, const unsigned char* s)
+{
+    ge25519_p3 h;
+    int rc = ristretto255_frombytes(&h, s);
+    ge25519_p3_tobytes(p, &h);
+    return rc;
+}
+
+int
+crypto_core_ristretto255_to_bytes(unsigned char* s, const unsigned char* p)
+{
+    ge25519_p3 h;
+    int rc = ge25519_frombytes(&h, p);
+    ristretto255_p3_tobytes(s, &h);
+    return rc;
+}
+
 void
 crypto_core_ristretto255_scalar_random(unsigned char *r)
 {

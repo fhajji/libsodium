@@ -48,6 +48,14 @@ void crypto_core_ristretto255_random(unsigned char *p)
             __attribute__ ((nonnull));
 
 SODIUM_EXPORT
+int crypto_core_ristretto255_from_bytes(unsigned char *p, const unsigned char *bytes)
+            __attribute__ ((nonnull));
+
+SODIUM_EXPORT
+int crypto_core_ristretto255_to_bytes(unsigned char *bytes, const unsigned char *p)
+            __attribute__ ((nonnull));
+
+SODIUM_EXPORT
 void crypto_core_ristretto255_scalar_random(unsigned char *r)
             __attribute__ ((nonnull));
 
