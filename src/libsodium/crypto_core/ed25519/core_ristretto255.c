@@ -95,6 +95,19 @@ crypto_core_ristretto255_to_bytes(unsigned char* bytes, const unsigned char* p)
 }
 
 void
+crypto_core_ristretto255_elligator(unsigned char* p, const unsigned char* bytes)
+{
+    ge25519_p3 point;
+
+    fe25519 message;
+    fe25519_frombytes(message, bytes);
+
+    ristretto255_elligator(&point, message);
+    
+    ristretto255_p3_tobytes(p, &point);
+}
+
+void
 crypto_core_ristretto255_scalar_random(unsigned char *r)
 {
     crypto_core_ed25519_scalar_random(r);

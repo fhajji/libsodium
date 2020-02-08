@@ -12,6 +12,7 @@ It is identical (up to the point of last sync), except that it adds:
 
 - crypto_core_ristretto255_from_bytes()
 - crypto_core_ristretto255_to_bytes()
+- crypto_core_ristretto255_elligator()
 
 Unless you have a very specific need for these additions, please use
 jedisct1/libsodium instead.
